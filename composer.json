@@ -1,0 +1,14 @@
+{
+  "name": "meldon/random",
+  "description": "RNG library",
+  "keywords": ["random"],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Meldon\\Random\\": "src/"
+    }
+  }
+}
