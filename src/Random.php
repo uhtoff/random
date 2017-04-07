@@ -1,16 +1,22 @@
 <?php
 namespace Meldon\Random;
-class Random { // Dice rolling static class = returns object with results as an array and total, can order ASC or DESC if requested
+class Random {
+    /**
+     * @param $number Number of dice to roll
+     * @param $sides Number of sides the dice should have
+     * @param null|'ASC'|'DESC' $order  Whether to sort the rolls and if so to sort ASC or DESC
+     * @return \stdClass
+     */
     public static function dice( $number, $sides, $order = NULL ) {
-        $roll = new stdClass();
+        $roll = new \stdClass();
         $roll->total = 0;
         $roll->num_dice = $number;
         for ( $i = 1; $i <= $number; $i++ ) {
             $roll->total += $roll->results[$i] = self::getInteger( 1, $sides );
         }
-        if ( $order == "ASC" ) {
+        if ( $order === "ASC" ) {
             sort( $roll->results );
-        } elseif ( $order == "DESC" ) {
+        } elseif ( $order === "DESC" ) {
             rsort( $roll->results );
         }
         return $roll;
