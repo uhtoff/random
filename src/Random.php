@@ -1,4 +1,5 @@
 <?php
+namespace Meldon\Random;
 class Random { // Dice rolling static class = returns object with results as an array and total, can order ASC or DESC if requested
     public static function dice( $number, $sides, $order = NULL ) {
         $roll = new stdClass();
