@@ -14,7 +14,7 @@ class Random {
         $roll->total = 0;
         $roll->num_dice = $number;
         for ( $i = 1; $i <= $number; $i++ ) {
-            $roll->total += $roll->results[$i] = self::getInteger( 1, $sides );
+            $roll->total += $roll->results[$i] = random_int( 1, $sides );
         }
         if ( $order === Random::SORT_ASC ) {
             sort( $roll->results );
