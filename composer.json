@@ -5,7 +5,7 @@
   "license": "MIT",
   "require": {
     "php": ">=5.4.0",
-    "paragonie/random_compat": "2.*"
+    "paragonie/random_compat": "1.4"
   },
   "autoload": {
     "psr-4": {
